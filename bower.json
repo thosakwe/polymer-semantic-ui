@@ -1,0 +1,23 @@
+{
+  "name": "polymer-semantic-ui",
+  "authors": [
+    "regiostech <thosakwe@gmail.com>"
+  ],
+  "description": "[WIP] Native Polymer elements for Semantic UI",
+  "main": "polymer-semantic-ui.html",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer",
+    "semantic-ui",
+    "button"
+  ],
+  "license": "GNU",
+  "homepage": "",
+  "ignore": [
+    ".bowerrc"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#~2.1.8"
+  }
+}
