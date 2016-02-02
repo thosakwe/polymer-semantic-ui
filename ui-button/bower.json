@@ -1,10 +1,10 @@
 {
-  "name": "polymer-semantic-ui",
+  "name": "ui-button",
   "version": "1.0.0",
   "authors": [
     "regiostech <thosakwe@gmail.com>"
   ],
-  "description": "[WIP] Native Polymer elements for Semantic UI",
+  "description": "Native Polymer support for Semantic UI buttons.",
   "keywords": [
     "web-component",
     "web-components",
@@ -13,7 +13,7 @@
     "semantic-ui",
     "polymer-semantic-ui"
   ],
-  "main": "polymer-semantic-ui.html",
+  "main": "ui-button.html",
   "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/polymer-semantic-ui/polymer-semantic-ui",
   "ignore": [
@@ -25,6 +25,7 @@
     "polymer": "Polymer/polymer#^1.0.0"
   },
   "devDependencies": {
+    "polymer-semantic-ui": "polymer-semantic-ui#^1.0.0",
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
     "web-component-tester": "*"
   }

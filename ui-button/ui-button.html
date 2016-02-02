@@ -1,0 +1,83 @@
+<link rel="import" href="../../polymer/polymer.html">
+
+<!--
+A button indicates a possible user action
+
+Example:
+
+    <ui-button>Hello world</ui-button>
+
+Buttons can have colors:
+
+    <ui-button color="red">I'm a red button</ui-button>
+
+They can be disabled, too. And you can add custom classes.
+
+    <ui-button class-name="animated" disabled>
+        <div class="visible content">Hover me</div>
+        <div class="hidden content">I'm disabled</div>
+    </ui-button>
+
+Buttons can even have icons.
+
+    <ui-button color="twitter" icon="twitter">Follow us on Twitter</ui-button>
+    <ui-button class-name="circular icon" color="red" icon="google plus"></ui-button>
+
+Heck, buttons can be links too.
+
+    <ui-button href="http://google.com/" icon="linkify">I'm a link, click me</ui-button>
+
+@demo
+-->
+<dom-module id="ui-button">
+    <template>
+        <a class$="ui [[className]] [[color]] [[_styleDisabled()]] [[size]] button" href$="{{href}}"
+           on-tap="_handleTap">
+            <template is="dom-if" if="[[icon]]">
+                <i class$="[[icon]] icon"></i>
+            </template>
+            <content></content>
+        </a>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'ui-button',
+        properties: {
+            /**
+             * Additional classes to apply to this button.
+             */
+            className: String,
+            /**
+             * The button's color.
+             */
+            color: String,
+            /**
+             * When set to true, this button cannot be clicked.
+             */
+            disabled: Boolean,
+            /**
+             * A URL to navigate to upon clicking this button.
+             */
+            href: String,
+            /**
+             * An icon to display within the button.
+             */
+            icon: String,
+            /**
+             * The button's size.
+             */
+            size: String
+        },
+        _handleTap: function (e, detail) {
+            this.fire('tap', detail);
+        },
+        _notHref: function () {
+            return !this.href;
+        },
+        _styleDisabled: function () {
+            return this.disabled ? 'disabled' : '';
+        }
+    });
+</script>

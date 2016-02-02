@@ -1,0 +1,34 @@
+{
+  "name": "polymer-semantic-ui",
+  "version": "0.0.1",
+  "description": "[WIP] Native Polymer elements for Semantic UI",
+  "main": "polymer-semantic-ui.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "polyserve -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polymer-semantic-ui/polymer-semantic-ui.git"
+  },
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "semantic",
+    "semantic-ui",
+    "polymer-semantic-ui"
+  ],
+  "author": "regiostech",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/polymer-semantic-ui/polymer-semantic-ui/issues"
+  },
+  "homepage": "https://github.com/polymer-semantic-ui/polymer-semantic-ui",
+  "devDependencies": {
+    "polyserve": "^0.5.0",
+    "web-component-tester": "^4.2.0"
+  }
+}

@@ -1,83 +1,56 @@
+# polymer-semantic-ui
 
-<!---
-
-This README is automatically generated from the comments in these files:
-paper-button.html
-
-Edit those files, and our readme bot will duplicate them over here!
-Edit this file, and the bot will squash your changes :)
-
-The bot does some handling of markdown. Please file a bug if it does the wrong
-thing! https://github.com/PolymerLabs/tedium/issues
-
--->
-
-[![Build Status](https://travis-ci.org/PolymerElements/paper-button.svg?branch=master)](https://travis-ci.org/PolymerElements/paper-button)
-
-_[Demo and API Docs](https://elements.polymer-project.org/elements/paper-button)_
+[WIP] Native Polymer elements for Semantic UI.
 
 
-##&lt;paper-button&gt;
+## Dependencies
 
-Material design: [Buttons](https://www.google.com/design/spec/components/buttons.html)
+Element dependencies are managed via [Bower](http://bower.io/). You can
+install that via:
 
-`paper-button` is a button. When the user touches the button, a ripple effect emanates
-from the point of contact. It may be flat or raised. A raised button is styled with a
-shadow.
+    npm install -g bower
 
-Example:
+Then, go ahead and download the element's dependencies:
 
-```html
-<paper-button>Flat button</paper-button>
-<paper-button raised>Raised button</paper-button>
-<paper-button noink>No ripple effect</paper-button>
-<paper-button toggles>Toggle-able button</paper-button>
-```
+    bower install
 
-A button that has `toggles` true will remain `active` after being clicked (and
-will have an `active` attribute set). For more information, see the `Polymer.IronButtonState`
-behavior.
 
-You may use custom DOM in the button body to create a variety of buttons. For example, to
-create a button with an icon and some text:
+## Playing With Your Element
 
-```html
-<paper-button>
-  <iron-icon icon="favorite"></iron-icon>
-  custom button content
-</paper-button>
-```
+If you wish to work on your element in isolation, we recommend that you use
+[Polyserve](https://github.com/PolymerLabs/polyserve) to keep your element's
+bower dependencies in line. You can install it via:
 
-### Styling
+    npm install -g polyserve
 
-Style the button with CSS as you would a normal DOM element.
+And you can run it via:
 
-```css
-paper-button.fancy {
-  background: green;
-  color: yellow;
-}
+    polyserve
 
-paper-button.fancy:hover {
-  background: lime;
-}
+Once running, you can preview your element at
+`http://localhost:8080/components/polymer-semantic-ui/`, where `polymer-semantic-ui` is the name of the directory containing it.
 
-paper-button[disabled],
-paper-button[toggles][active] {
-  background: red;
-}
-```
 
-By default, the ripple is the same color as the foreground at 25% opacity. You may
-customize the color using the `--paper-button-ink-color` custom property.
+## Testing Your Element
 
-The following custom properties and mixins are also available for styling:
+Simply navigate to the `/test` directory of your element to run its tests. If
+you are using Polyserve: `http://localhost:8080/components/polymer-semantic-ui/test/`
 
-| Custom property | Description | Default |
-| --- | --- | --- |
-| `--paper-button-ink-color` | Background color of the ripple | `Based on the button's color` |
-| `--paper-button` | Mixin applied to the button | `{}` |
-| `--paper-button-disabled` | Mixin applied to the disabled button. Note that you can also use the `paper-button[disabled]` selector | `{}` |
-| `--paper-button-flat-keyboard-focus` | Mixin applied to a flat button after it's been focused using the keyboard | `{}` |
-| `--paper-button-raised-keyboard-focus` | Mixin applied to a raised button after it's been focused using the keyboard | `{}` |
+### web-component-tester
 
+The tests are compatible with [web-component-tester](https://github.com/Polymer/web-component-tester).
+Install it via:
+
+    npm install -g web-component-tester
+
+Then, you can run your tests on _all_ of your local browsers via:
+
+    wct
+
+#### WCT Tips
+
+`wct -l chrome` will only run tests in chrome.
+
+`wct -p` will keep the browsers alive after test runs (refresh to re-run).
+
+`wct test/some-file.html` will test only the files you specify.
